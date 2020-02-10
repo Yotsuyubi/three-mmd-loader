@@ -97,18 +97,18 @@ const MMDLoader = ( function () {
 
 			}
 
-			var modelExtension = this._extractExtension( url ).toLowerCase();
+			// var modelExtension = this._extractExtension( url ).toLowerCase();
+      //
+			// // Should I detect by seeing header?
+			// if ( modelExtension !== 'pmd' && modelExtension !== 'pmx' ) {
+      //
+			// 	if ( onError ) onError( new Error( 'THREE.MMDLoader: Unknown model file extension .' + modelExtension + '.' ) );
+      //
+			// 	return;
+      //
+			// }
 
-			// Should I detect by seeing header?
-			if ( modelExtension !== 'pmd' && modelExtension !== 'pmx' ) {
-
-				if ( onError ) onError( new Error( 'THREE.MMDLoader: Unknown model file extension .' + modelExtension + '.' ) );
-
-				return;
-
-			}
-
-			this[ modelExtension === 'pmd' ? 'loadPMD' : 'loadPMX' ]( url, function ( data ) {
+			this[ 'loadPMX' ]( url, function ( data ) {
 
 				onLoad(	builder.build( data, resourcePath, onProgress, onError )	);
 
