@@ -17,6 +17,6 @@
   "dependencies": {
     "ammo.js": "0.0.10",
     "mmd-parser": "^1.0.3",
-    "three": "^0.113.2"
+    "three": "^0.137.0"
   }
 }
